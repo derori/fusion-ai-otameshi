@@ -29,7 +29,7 @@ const server = new Server(
 async function callOpus(systemPrompt, userPrompt) {
   try {
     const response = await anthropic.messages.create({
-      model: "claude-3-opus-20240229",
+      model: "claude-opus-4-7",
       max_tokens: 4000,
       system: systemPrompt,
       messages: [{ role: "user", content: userPrompt }],
