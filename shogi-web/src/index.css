@@ -1,0 +1,83 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: black;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(9, 50px);
+  border: 2px solid black;
+  width: fit-content;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.square.selected {
+  background-color: #eee;
+}
+
+.square.cursor {
+  outline: 3px solid #000;
+  outline-offset: -3px;
+  z-index: 1;
+}
+
+.board:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+}
+
+.piece {
+  font-size: 30px;
+  user-select: none;
+}
+
+.piece.gote {
+  transform: rotate(180deg);
+}
+
+.status {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
