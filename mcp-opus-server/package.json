@@ -1,0 +1,14 @@
+{
+  "name": "mcp-opus-server",
+  "version": "1.0.0",
+  "description": "Claude Opus integration for Gemini CLI via MCP",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  }
+}
